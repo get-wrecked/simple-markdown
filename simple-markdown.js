@@ -264,7 +264,7 @@ var FORMFEED_R = /\f/g;
  * @returns {string}
  */
 var preprocess = function(source /* : string */) {
-    return source.replace(CR_NEWLINE_R, '\n')
+    return source && source.replace(CR_NEWLINE_R, '\n')
             .replace(FORMFEED_R, '')
             .replace(TAB_R, '    ');
 };
